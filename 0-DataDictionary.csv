@@ -1,0 +1,152 @@
+﻿Variable Name,Data Source,Data Type,Variable Description,Values,Notes,"Used for 
+Model Selection",Logistic Regression
+SEQN,ID,categorical,unique identifier,range,,0,
+RIAGENDR,demographic,categorical,gender,"1 = male
+2 = female",,1,
+RIDAGEYR,demographic,numeric,age,range: 18-150,individuals > 80 are coded at 80,1,
+DMDBORN4,demographic,categorical,born in US,"1 = born in US
+2 = born outside US",,1,
+RIDRETH3,demographic,categorical,race,"1 = Mexican American
+2 = Other Hispanic
+3 = non-Hispanic white
+4 = non-Hispanic black
+6 = non-Hispanic Asian
+7 = non-Hispanic multiracial ",,1,
+DMQMILIZ,demographic,categorical,military service,"1 = yes
+2 = no",,1,
+DMDMARTL,demographic,categorical,marital status,"1 = married
+2 = widowed
+3 = divorced
+4 = separated
+5 = never married
+6 = living with partner",,1,
+RIDEXPRG,demographic,categorical,currently pregnant,"1 = yes, positive lab test
+2 = not pregnant at exam
+3 = cannot ascertain 
+. = missing","recoded into variable ""pregnant""",0,
+DMDHHSZA,demographic,categorical,children under 5,"0 = 0 children
+1 = 1 child
+2 = 2 children
+3 = 3 or more children",,1,
+DMDHHSZB,demographic,categorical,children 5 - 17,"0 = 0 children
+1 = 1 child
+2 = 2 children
+3 = 3 children
+4 = 4 or more children",,1,
+INDHHIN2,demographic,categorical,household income,"1 = 0-4,999
+2 = 5,000 to 9,999
+3 = 10,000 to 14,999
+4 = 15,000 to 19,999
+5 = 20,000 to 24,999
+6 = 25,000 to 34,999
+7 = 35,000 to 44,999
+8 = 45,0000 to 54,000
+9 = 55,000 to 64,999
+10 = 65,000 to 74,999
+12 = 20,000 and Over
+13 = Under 20,000
+14 = 75,000 to 99,999
+15 = 100,000 and Over
+99 = Don't know",,1,
+ALQ120U,questionnaire,categorical,how often do you drink,"1 = week
+2 = month
+3 = year
+. = missing",how often alcohol,1,
+ALQ130,questionnaire,numeric,avg. of drinks per day,"range = 1-25, 999 = unknown",how much alcohol,0,
+BPQ020,questionnaire,categorical,told you have high blood pressure,"1 = yes,
+2 = no",,1,
+BPQ080,questionnaire,categorical,told you have high cholesterol,"1 = yes,
+2 = no,
+9 = don't know",,1,
+HSD010,questionnaire,categorical,self-reported general health,"1 = excellent,
+2 = very good,
+3 = good,
+4 = fair,
+5 = poor,
+9 = don't know",missing combined with don't know,1,
+DIQ010,questionnaire,categorical,diabetes,"1 = yes,
+2 = no,
+3 = borderline",individuals that didn't know were removed,1,
+DBD910,questionnaire,numeric,frozen meals/pizza,"range = 0 -180, 9999 = unknown",,0,
+DLQ010,questionnaire,categorical,difficulty hearing,"1 = yes,
+2 = no",unknown or refused to answer removed,1,
+DLQ020,questionnaire,categorical,difficulty seeing,"1 = yes,
+2 = no",unknown or refused to answer removed,1,
+DLQ040,questionnaire,categorical,difficulty concentrating,"1 = yes,
+2 = no",unknown or refused to answer removed,1,
+DLQ050,questionnaire,categorical,difficulty walking/stairs,"1 = yes,
+2 = no",unknown or refused to answer removed,1,
+DLQ060,questionnaire,categorical,difficulty bathing,"1 = yes, 
+2 = no",unknown or refused to answer removed,1,
+DLQ080,questionnaire,categorical,difficulty doing errands,"1 = yes,
+2 = no",unknown or refused to answer removed,1,
+FSD032A,questionnaire,categorical,last 12 months have you been worried about running out of food,"1 = often true,
+2 = sometimes true,
+3 = never true,
+9 = missing",unknown or refused to answer missing,1,
+HIQ011,questionnaire,categorical,are you covered by health insurance,"1 = yes,
+2 = no",unknown removed from set,1,
+HUQ090,questionnaire,categorical,mental health last 12 months,"1 = yes,
+2 = no",unknown removed from set,1,
+HOQ065,questionnaire,categorical,"home owned, bought, rented, other","1 = owned or being bought,
+2 = rented,
+3 = other arrangement,
+9 = unknown",missing or refused to answer combined into unknown,1,
+MCQ220,questionnaire,categorical,ever told you have cancer,"1 = yes,
+2 = no",unknown or refused to answer removed,1,
+MCQ160M,questionnaire,categorical,ever told you had thyroid problems,"1 = yes,
+2 = no",unknown observations were removed ,1,
+MCQ160E,questionnaire,categorical,heart attack,"1 = yes,
+2 = no",unknown observations were removed (n = 3),1,
+MCQ160C,questionnaire,categorical,ever told you had heart disease,"1 = yes,
+2 = no",unknown observations were removed (n = 15),1,
+OHQ030,questionnaire,categorical,when did you last visit dentist,"1 = 6 months or less,
+2 = more than 6 months, less than a year,
+3 = more than 1 year, less than 2 years,
+4 = more than 2 years, less than 3 years,
+5 = more than 3 years, less than 5 years,
+6 = more than 5 years,
+7 = never have been",unknown observations were removed (n = 2),1,
+RXQ510,questionnaire,categorical,low-dose aspirin,"1 = yes,
+2 = no,
+9 = don't know/didn't answer,
+not applicable = respondent < 40","this variable was only collected on individuals > 40 years old, respondents < 40 were coded as not applicable ",1,
+SLD010H,questionnaire,numeric,number of hours of sleep,"range = 2 to 12, 99 = unknown",recoded into sleep_binned,0,
+SMD650,questionnaire,numeric,avg. # of ciggs a day,"range = 1 to 90, . = missing",recoded into smoking to better categorize nonsmokers & amount,0,
+SMD470,questionnaire,categorical,# of people who smoke inside,"0 = no inside smokers
+1 = 1 household member smokes inside,
+2 = 2 household members smoke inside,
+3 = 3 or more, 
+. = missing",used with above to identify indoor secondhand smoke,0,
+WHD010,questionnaire,numeric,self-reported height (inches),range = 48 - 81,transformed into BMI,0,
+WHD020,questionnaire,numeric,self-reported weight (pounds),range = 75 to 493,transformed into BMI,0,
+LBDB12,lab,numeric,Vitamin B12(pg/mL),18 to 26801,recoded into b12low,0,
+b12low,created,categorical,identifies individuals with low/borderline b12,"0 = not low/borderline low in b12
+1 = low/borderline low (b12 pg/ml < 300)  ",coded from LBDB12 into binary variable based on information from websites listed in R file,1,
+pregnant,created,categorical,if individual is currently pregnant,"not applicable,
+pregnant,
+not pregnant
+unknown","created from RIDEXPRG, ""not applicable"" denotes male individuals",1,
+smoking,created,categorical,"indicates if participant smokes, and if so how much","nonsmoker
+light
+moderate
+heavy
+very heavy",binned version of SMD650,1,
+secondhand_smoke,created,categorical,indoor secondhand smoke exposure,"unknown,
+no exposure,
+exposure",used with smoking indicator & SMD470,1,
+ALQ_avgdrinks,created,categorical,"when individual drinks, how much do they drink","not drinker,
+light,
+moderate,
+heavy,
+very heavy","created from ALQ130, unknowns removed (n=3)",1,
+monthlyfrozen,created,categorical,how frequently an individual consumes frozen pizza or meals,"never,
+rarely,
+sometimes,
+frequently,
+very frequently",individuals who did not answered were removed (n=11),1,
+sleep_bin,created,categorical,categorical value for hours slept,"2-5 hours,
+6-7 hours,
+8-9 hours,
+10-12 hours","created from SLD010H, unknown were dropped (n=8)",1,
+BMI,created,numeric,calculated value of BMI,range = 14.9 to 73.97,"created with using BMI formula with WHD010 (height) & WHD020 (weight), respondents with missing or extreme values In either of these variables were removed (n=124)",1,
