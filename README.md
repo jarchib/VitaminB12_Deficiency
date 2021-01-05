@@ -7,5 +7,5 @@ _Data was sourced from a Kaggle [repository](https://www.kaggle.com/cdc/national
 * _demographic.csv:_ raw source data file of demographic information
 * _labs.csv_: raw source data file of lab information
 * _questionnaire.csv_: raw source data file of questionnaire data
-* _0-DataDictionary.csv:_ contains a reduce list of variables (including definitions & values) used in model selection, binary columns indicate if a variable was used in/selected for certain parts of the data process (0=no, 1=yes)
+* _0-DataDictionary.csv:_ contains a reduce list of variables (including definitions & values) used in model selection, binary columns indicate if a variable was used in/selected for certain parts of the data process (0=no, 1=yes), definitions pulled from the NHANES website [(demographic data)](https://wwwn.cdc.gov/nchs/nhanes/search/variablelist.aspx?Component=Demographics&CycleBeginYear=2013), [(lab data)](https://wwwn.cdc.gov/nchs/nhanes/search/variablelist.aspx?Component=Laboratory&CycleBeginYear=2013), [(questionnaire data)](https://wwwn.cdc.gov/nchs/nhanes/search/variablelist.aspx?Component=Questionnaire&CycleBeginYear=2013)
 * _1-DataPrep.R:_ first code file in R that contains script used to clean, prep, and understand data prior to modeling
