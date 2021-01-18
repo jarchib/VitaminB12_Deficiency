@@ -417,7 +417,8 @@ save(b12_train, b12_valid, b12_test, file = "b12split.Rdata")
 
 # But for ease of access for others who may not be using R
 # We'll also write it to CSVs
+# (row.names = FALSE will keep R from writing out a column that lists the observation number)
 
-write.csv(b12_train, "b12train.csv")
-write.csv(b12_valid, "b12valid.csv")
-write.csv(b12_test, "b12test.csv")
+write.csv(b12_train, "b12train.csv", row.names = FALSE)
+write.csv(b12_valid, "b12valid.csv", row.names = FALSE)
+write.csv(b12_test, "b12test.csv", row.names = FALSE)
